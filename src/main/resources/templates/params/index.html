@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8"/>
+<title th:text="${titulo}"></title>
+</head>
+<body>
+	<h1 th:text="${titulo}"></h1>
+	<ul>
+		<li><a th:href="@{ /params/string(texto='Hola Juan Andrés López H. Eres el Mejor!!') }">Saludar a Andrés</a></li>
+		<li><a th:href="@{ /params/string(texto='Hola Adrianita Bella. Estas Casada con el Mejor!!') }">Saludar a Adriana</a></li>
+		<li><a th:href="@{ /params/mix-params(saludo='Que Onda Juan!!!', numero=200583) }">Parámetros Mix</a></li>
+		<li><a th:href="@{ /params/mix-params-request(saludo='Que Onda Juan Juan!!!', numero=200583) }">Parámetros Mix con Request</a></li>
+	</ul>
+</body>
+</html>
